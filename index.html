@@ -7,8 +7,31 @@
     </head>
     <body>
         <div class="container">
-            <nav></nav>
-                <section></section>
+            <nav>
+                <ul class="menu">
+                    <li>Cadastro</li>
+                    <li>Consultas</li>
+                </ul>
+            </nav>
+                <section>
+                    <h1>Cadastro de usuarios</h1>
+                    <hr><br><br>
+
+                    <!-- Formulario com um metodo de envio POST -->
+                     <form method="POST" action="processa.php">
+                        <input type="submit" value="Salvar" class="btn">
+                        <input type="reset" value="Limpar" class="btn">
+
+                        <br><br>
+
+                        Nome<br>
+                        <input type="text" name="nome" class="campo" placeholder="digite o nome" maxlength="40" required autofocus><br><br>
+                        E-MAIL<br>
+                        <input type="email" name="e-mail" class="campo" placeholder="digite o seu E-mail" maxlength="50" required><br><br>
+                        PROFISSÃO<br>
+                        <input type="text" name="profissão" class="campo" placeholder="escreva sua profissão" maxlength="40" required><br><br>
+                     </form>
+                </section>
         </div>
     </body>
 </html>

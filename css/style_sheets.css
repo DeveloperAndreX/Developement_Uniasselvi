@@ -68,8 +68,9 @@ il.menu li {
 .campo {
     width: 300px;
     height: 30px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 /*Ajuste dos nomes formulario*/
 #p1 {
@@ -93,4 +94,29 @@ il.menu li {
     color:black;
     padding:0px;
 
+}
+/*estilizando o Menu Principal*/
+h1.title-1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    color:rgb(198, 17, 214);
+    text-align: justify;
+    padding-bottom: 10px;
+    
+}
+
+#rodape {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: normal;
+    color:yellow;
+    text-align: justify;
+    padding-top: 1px;
+
+
+}
+#titleh3 {
+    border-radius: 0%;
+    padding: 1px;
 }

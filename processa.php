@@ -10,7 +10,7 @@ $sql = "INSERT INTO usuarios(nome,email,profissao) VALUES ('$nome','$email','$pr
 $salvar = mysqli_query($conexao,$sql);
 
 $linhas = mysqli_affected_rows($conexao);
-$linhas_stmt = mysqli_stmt_affected_rows($conexao);
+
 
 mysqli_close($conexao);
 

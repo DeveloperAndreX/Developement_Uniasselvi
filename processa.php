@@ -9,7 +9,8 @@ $profissao = $_POST['profissao'];
 $sql = "INSERT INTO usuarios(nome,email,profissao) VALUES ('$nome','$email','$profissao')";
 $salvar = mysqli_query($conexao,$sql);
 
-$row = mysqli_affected_rows($conexao);
+$linhas = mysqli_affected_rows($conexao);
+$linhas_stmt = mysqli_stmt_affected_rows($conexao);
 
 mysqli_close($conexao);
 
@@ -34,11 +35,10 @@ mysqli_close($conexao);
                     <h1 class="title-1">Confirmação de Cadastro</h1>
                     <hr><br><br>
                     <?php
-                    if($row == 1){
-                        print("Cadastro Efetuado com Sucesso!");
-
+                    if($linhas == 1) {
+                        print("Cadastro efetuado com Sucesso");
                     }else{
-                        print("Cadastro não Efetuado. <br> ja existe um usuario com este e-mail");
+                        print("Cadastro não Efetuado <br> Já existe um usuario com este e-mail");
                     }
                     ?>
                  </section>

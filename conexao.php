@@ -10,6 +10,7 @@ $port = "3307";
 $conexao = mysqli_connect($hostname, $user, $password, $dbname, $port);
 
 if(!$conexao) {
-    mysqli_connect_errno() . mysqli_connect_error() . "<br>" . print("Falha na conexãao com o banco de Dados");}
+   mysqli_connect_errno() . mysqli_connect_error() .  print("Falha na conexãao com o banco de Dados");
+   }
     
 ?>

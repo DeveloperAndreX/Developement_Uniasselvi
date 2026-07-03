@@ -9,6 +9,8 @@ $profissao = $_POST['profissao'];
 $sql = "INSERT INTO usuarios(nome,email,profissao) VALUES ('$nome','$email','$profissao')";
 $salvar = mysqli_query($conexao,$sql);
 
+$row = mysqli_affected_rows($conexao);
+
 mysqli_close($conexao);
 
 ?>
@@ -31,6 +33,14 @@ mysqli_close($conexao);
                 <section>
                     <h1 class="title-1">Confirmação de Cadastro</h1>
                     <hr><br><br>
+                    <?php
+                    if($row == 1){
+                        print("Cadastro Efetuado com Sucesso!");
+
+                    }else{
+                        print("Cadastro não Efetuado. <br> ja existe um usuario com este e-mail");
+                    }
+                    ?>
                  </section>
                 <footer id="rodape"><h3 id="titleh3">Universidade Leonardo da Vinci - 2026 Todos os Direitos Reservados</h3></footer>
         </div>

@@ -35,11 +35,10 @@ mysqli_close($conexao);
                     <h1 class="title-1">Confirmação de Cadastro</h1>
                     <hr><br><br>
                     <?php
-                    if($linhas == 1) {
+                    if($linhas==1) {
                         print("Cadastro efetuado com Sucesso");
-                    }else{
-                        print("Cadastro não Efetuado <br> Já existe um usuario com este e-mail");
-                    }
+                    }else{print("Cadastro não Efetuado <br> Já existe um usuario com este e-mail");}
+                        
                     ?>
                  </section>
                 <footer id="rodape"><h3 id="titleh3">Universidade Leonardo da Vinci - 2026 Todos os Direitos Reservados</h3></footer>

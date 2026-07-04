@@ -120,3 +120,14 @@ h1.title-1 {
     border-radius: 0%;
     padding: 1px;
 }
+#placeholder1 {
+    text-align: center;
+
+}
+
+article {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 5px;
+}

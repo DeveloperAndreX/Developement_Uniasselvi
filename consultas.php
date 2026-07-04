@@ -3,7 +3,7 @@ include_once("conexao.php");
 
 $filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
 
-$sql_select = "SELECT * FROM usuarios where profissao like '%$filtro%'";
+$sql_select = "SELECT * FROM usuarios where profissao like '%$filtro%'order by nome";
 $sql_consulta = mysqli_query($conexao, $sql_select);
 $records = mysqli_num_rows($sql_consulta);
 
@@ -36,7 +36,9 @@ $records = mysqli_num_rows($sql_consulta);
                         <input type="submit" value="Pesquisar" class="btn">
                     </form>
                     <?php
-                    print("Registros encontrados N° $records ")."<br>";
+                    print "Resultado da Pesquisa com a palavra <strong> $filtro </strong><br><br>";
+                    
+                    print "Registros encontrados N° $records "."<br>";
 
                     print("<br><br>");
 
@@ -67,7 +69,7 @@ $records = mysqli_num_rows($sql_consulta);
 
                     
                 </section>
-                <!--<footer id="rodape"><h3 id="titleh3">Universidade Leonardo da Vinci - 2026 Todos os Direitos Reservados</h3></footer> -->
+                <footer id="rodape"><h3 id="titleh3">Universidade Leonardo da Vinci - 2026 Todos os Direitos Reservados</h3></footer>
         </div>
         
     </body>

@@ -28,6 +28,11 @@ mysqli_close($conexao);
                 <section>
                     <h1 class="title-1">Consultas</h1>
                     <hr><br><br>
+
+                    <form method="get" action="">
+                        Filtrar por Profissão: <input type="text" name="filtro" class="campo" placeholder="Pesquise" required autofocus>
+                        <input type="submit" value="pesquisar" class="btn">
+                    </form>
                     <?php
                     print("Registros encontrados N° $records ")."<br>";
                   

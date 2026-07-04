@@ -1,6 +1,11 @@
 <?php
 include_once("conexao.php");
 
+$sql_select = "SELECT * FROM usuarios";
+$sql_consulta = mysqli_query($conexao, $sql_select);
+$records = mysqli_num_rows($sql_consulta);
+
+
 mysqli_close($conexao);
 
 ?>
@@ -23,6 +28,11 @@ mysqli_close($conexao);
                 <section>
                     <h1 class="title-1">Consultas</h1>
                     <hr><br><br>
+                    <?php
+                    print("Registros encontrados N° $records ")."<br>";
+                  
+
+                    ?>
 
                     
                 </section>

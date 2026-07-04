@@ -1,7 +1,9 @@
 <?php
 include_once("conexao.php");
 
-$sql_select = "SELECT * FROM usuarios";
+$filtro = isset($_GET['filtro'])?$_GET['filtro']:"";
+
+$sql_select = "SELECT * FROM usuarios where profissao like '%$filtro%'";
 $sql_consulta = mysqli_query($conexao, $sql_select);
 $records = mysqli_num_rows($sql_consulta);
 
@@ -53,19 +55,19 @@ $records = mysqli_num_rows($sql_consulta);
                        print "$profissao";
 
                       print "</article>";
-
-                      mysqli_close($conexao);
+        
 
 
                     };
 
+                 mysqli_close($conexao);
                   
 
                     ?>
 
                     
                 </section>
-                <footer id="rodape"><h3 id="titleh3">Universidade Leonardo da Vinci - 2026 Todos os Direitos Reservados</h3></footer>
+                <!--<footer id="rodape"><h3 id="titleh3">Universidade Leonardo da Vinci - 2026 Todos os Direitos Reservados</h3></footer> -->
         </div>
         
     </body>
